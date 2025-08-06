@@ -1,0 +1,33 @@
+<div class="container-fluid" [formGroup]="addUserForm">
+    <div class="row">
+        <div class="col-4">
+            <label for="" class="form-label">UserName</label>
+            <input type="text" class="form-control" name="username" id="username" formControlName="username">
+        </div>
+
+        <div class="col-4">
+            <label for="" class="form-label">Role</label>
+            <input type="text" class="form-control" name="role" id="role" formControlName="role">
+        </div>
+
+        <div class="col-4">
+            <label for="" class="form-label">Salary</label>
+            <input type="text" class="form-control" name="salary" id="salary" formControlName="salary">
+        </div>
+    </div>
+</div>
+
+@if(notifyUser){
+    <div class="container-fluid py-3" >
+        <div class="text-bg-warning p-3">
+            {{ message }}
+        </div>
+    </div>
+}
+
+
+<div class="container-fluid my-3">
+    <button class="btn btn-warning"  (click)="addUser()">
+        Add User To DB
+    </button>
+</div>
